@@ -1,6 +1,6 @@
 {
   "name": "locksmart-api",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "API client for the Dog & Bone LockSmart service",
   "main": "index.js",
   "scripts": {
