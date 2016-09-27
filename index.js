@@ -33,7 +33,7 @@ class LockSmartApiClient {
     });
   }
 
-  getLocks (email, password) {
+  getLocks () {
     const self = this;
     return co(function * () {
       const uri = LOCKSMART_API_BASE_URI + LOCKSMART_API_GET_LOCKS_URI +
