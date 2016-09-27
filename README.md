@@ -3,8 +3,8 @@
 > API client for the Dog & Bone LockSmart service
 
 [![npm version](https://img.shields.io/npm/v/locksmart-api.svg)](https://www.npmjs.com/package/locksmart-api)
-[![Code Climate](https://img.shields.io/codeclimate/github/spinda/locksmart-api.svg)](https://codeclimate.com/github/spinda/locksmart-api)
-[![js-semistandard-style](https://img.shields.io/badge/code%20style-semistandard-brightgreen.svg](https://github.com/Flet/semistandard)
+[![code climate](https://img.shields.io/codeclimate/github/spinda/locksmart-api.svg)](https://codeclimate.com/github/spinda/locksmart-api)
+[![js-semistandard-style](https://img.shields.io/badge/code%20style-semistandard-brightgreen.svg)](https://github.com/Flet/semistandard)
 
 ## Background
 
