@@ -11,9 +11,9 @@
 [*Dog & Bone*](https://www.dogandbonecases.com/) sell a set of Bluetooth
 LE-enabled padlocks that can be opened with their
 ["LockSmart" app](https://play.google.com/store/apps/details?id=com.dogandbonecases.locksmart).
-The app stores lock information&mdash;including the randomly-generated unlock
-code saved in each lock's memory&mdash;via an HTTP API. This package implements
-a client for that API.
+The app stores and retrieves lock information via an HTTP API, including a
+random per-lock "password" used for unlocking. This package implements a client
+for that API.
 
 At the moment this only implements logging in and pulling lock information, as
 that's all I've needed personally. Adding support for additional endpoints
@@ -127,6 +127,13 @@ the `locksmart-api` module:
 - `LOCKSMART_API_BASE_URI`
 - `LOCKSMART_API_LOGIN_URI`
 - `LOCKSMART_API_GET_LOCKS_URI`
+
+## Development
+
+```
+$ npm lint # checks code style and license compatibility
+$ npm test # simple test script (requires a LockSmart account)
+```
 
 ## License
 
