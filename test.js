@@ -1,10 +1,12 @@
 const co = require('co');
 const prompt = require('prompt-promise');
 
-const { LockSmartApiClient } = require('.');
+const locksmartApi = require('.');
 
 co(function * () {
-  const client = new LockSmartApiClient();
+  console.log(locksmartApi);
+
+  const client = new locksmartApi.LockSmartApiClient();
 
   const email = yield prompt('email: ');
   const password = yield prompt.password('password: ');

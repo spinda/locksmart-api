@@ -4,8 +4,8 @@ const rp = require('request-promise-native');
 const LOCKSMART_API_DEFAULT_KEY = 'f0753b5844d36234302088a2b3be4c1f';
 
 const LOCKSMART_API_BASE_URI = 'https://locksmart.dogandbonecases.com/api/v2/';
-const LOCKSMART_API_LOGIN_URI = 'users/login.json';
-const LOCKSMART_API_GET_LOCKS_URI = 'locks/get.json';
+const LOCKSMART_API_LOGIN_ENDPOINT = 'users/login.json';
+const LOCKSMART_API_GET_LOCKS_ENDPOINT = 'locks/get.json';
 
 // Note: the LockSmart API server is sensitive to GET parameter order!
 class LockSmartApiClient {
@@ -19,7 +19,7 @@ class LockSmartApiClient {
       const options = {
         json: true,
         method: 'POST',
-        uri: LOCKSMART_API_BASE_URI + LOCKSMART_API_LOGIN_URI,
+        uri: LOCKSMART_API_BASE_URI + LOCKSMART_API_LOGIN_ENDPOINT,
         form: {
           apikey: self.apiKey,
           email: email,
@@ -36,7 +36,7 @@ class LockSmartApiClient {
   getLocks () {
     const self = this;
     return co(function * () {
-      const uri = LOCKSMART_API_BASE_URI + LOCKSMART_API_GET_LOCKS_URI +
+      const uri = LOCKSMART_API_BASE_URI + LOCKSMART_API_GET_LOCKS_ENDPOINT +
                   '?token=' + escape(self.token) +
                   '&firmware_channel=2' +
                   '&apikey=' + escape(self.apiKey);
@@ -57,6 +57,6 @@ exports.LockSmartApiClient = LockSmartApiClient;
 exports.LOCKSMART_API_DEFAULT_KEY = LOCKSMART_API_DEFAULT_KEY;
 
 exports.LOCKSMART_API_BASE_URI = LOCKSMART_API_BASE_URI;
-exports.LOCKSMART_API_LOGIN_URI = LOCKSMART_API_LOGIN_URI;
-exports.LOCKSMART_API_GET_LOCKS_URI = LOCKSMART_API_GET_LOCKS_URI;
+exports.LOCKSMART_API_LOGIN_ENDPOINT = LOCKSMART_API_LOGIN_ENDPOINT;
+exports.LOCKSMART_API_GET_LOCKS_ENDPOINT = LOCKSMART_API_GET_LOCKS_ENDPOINT;
 

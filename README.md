@@ -123,10 +123,10 @@ Present after logging in. It is unknown whether or not this expires.
 In addition to `LockSmartApiClient,` thhe following constants are exposed from
 the `locksmart-api` module:
 
-- `LOCKSMART_API_DEFUALT_KEY`
+- `LOCKSMART_API_DEFAULT_KEY`
 - `LOCKSMART_API_BASE_URI`
-- `LOCKSMART_API_LOGIN_URI`
-- `LOCKSMART_API_GET_LOCKS_URI`
+- `LOCKSMART_API_LOGIN_ENDPOINT`
+- `LOCKSMART_API_GET_LOCKS_ENDPOINT`
 
 ## Development
 
